@@ -4,8 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/Logint-Test/app/src/main/res/layout/activity_main.xml" value="0.15172101449275363" />
+        <entry key="..\:/AndroidStudioProjects/Logint-Test/app/src/main/res/layout/fragment_geo_location_map.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/Logint-Test/app/src/main/res/layout/fragment_home.xml" value="0.2115036231884058" />
         <entry key="..\:/AndroidStudioProjects/Logint-Test/app/src/main/res/layout/fragment_login.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/Logint-Test/app/src/main/res/layout/fragment_register.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/Logint-Test/app/src/main/res/layout/fragment_user_detail.xml" value="0.2115036231884058" />
+        <entry key="..\:/AndroidStudioProjects/Logint-Test/app/src/main/res/layout/user_items.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/Logint-Test/app/src/main/res/menu/menu_main.xml" value="0.31666666666666665" />
       </map>
     </option>
   </component>

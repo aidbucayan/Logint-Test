@@ -41,5 +41,29 @@
         android:id="@+id/homeFragment"
         android:name="com.adrian.bucayan.logintest.presentation.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.adrian.bucayan.logintest.presentation.ui.details.UserDetailFragment"
+        android:label="fragment_user_detail"
+        tools:layout="@layout/fragment_user_detail" >
+        <action
+            android:id="@+id/action_userDetailFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_userDetailFragment_to_geoLocationMapFragment"
+            app:destination="@id/geoLocationMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/geoLocationMapFragment"
+        android:name="com.adrian.bucayan.logintest.presentation.ui.geo.GeoLocationMapFragment"
+        android:label="GeoLocationMapFragment" >
+        <action
+            android:id="@+id/action_geoLocationMapFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
+    </fragment>
 </navigation>

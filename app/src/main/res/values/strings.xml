@@ -23,12 +23,19 @@
     <string name="enter_name">Enter Name</string>
     <string name="enter_phone">Enter Phone Number</string>
 
-    <string name="error_couldnt_reach_server">\"Oops! Couldn\'t reach server. Check your internet connection.\"</string>
-    <string name="oops_something_went_wrong">\"Oops! Something went wrong. Please try again.\"</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="password_invalid">This password is invalid. \n 1 uppercase, 1 lowercase, 1 numeric character and minimum of 8 Characters length</string>
     <string name="email_invalid">This email address is invalid</string>
+    <string name="username_invalid">Minimum of 3 Characters length</string>
+
+    <string name="registration_success">Registration Success</string>
+    <string name="username_already_taken">Username already taken!</string>
+    <string name="incorrect_username_or_password">Incorrect username or password!</string>
+
+    <string name="user_list_empty">Empty user list</string>
+    <string name="details">Details</string>
+    <string name="map">Map</string>
+
+    <string name="mapbox_access_token">sk.eyJ1IjoiYWRyaWFuYnVjYXlhbiIsImEiOiJjbDVjN2UyamIwYWY0M3BwbmxxOTY0ZWQ5In0.URdswnT9oXIqW__7HmMoIA</string>
+    <string name="location_error">Error on getting the location</string>
 
 </resources>

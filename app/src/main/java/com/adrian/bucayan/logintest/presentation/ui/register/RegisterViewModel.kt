@@ -5,7 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.adrian.bucayan.logintest.common.Resource
+import com.adrian.bucayan.logintest.domain.model.User
 import com.adrian.bucayan.logintest.domain.request.UserRequest
+import com.adrian.bucayan.logintest.domain.use_case.GetUserByUsernameUseCase
 import com.adrian.bucayan.logintest.domain.use_case.RegisterUserUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
@@ -15,16 +17,18 @@ import javax.inject.Inject
 
 @HiltViewModel
 class RegisterViewModel @Inject constructor(
-    private val registerUserUseCase: RegisterUserUseCase): ViewModel() {
+    private val registerUserUseCase: RegisterUserUseCase,
+    private val getUserByUserNameUseCase : GetUserByUsernameUseCase
+): ViewModel() {
 
     private val _dataStateRegisterUser: MutableLiveData<Resource<Unit>> = MutableLiveData()
 
     val dataStateRegisterUser: LiveData<Resource<Unit>> = _dataStateRegisterUser
 
-    fun onAddEvent(event: AddUserEvent, request: UserRequest) {
+    fun onRegisterEvent(event: RegisterUserEvent, request: UserRequest) {
         viewModelScope.launch {
             when(event) {
-                is AddUserEvent.SaveUser -> {
+                is RegisterUserEvent.SaveUser -> {
                     registerUserUseCase(request)
                         .onEach { dataStateRegisterUser ->
                             _dataStateRegisterUser.value = dataStateRegisterUser
@@ -36,8 +40,31 @@ class RegisterViewModel @Inject constructor(
 
     }
 
+    private val _dataStateGetUser: MutableLiveData<Resource<User>> = MutableLiveData()
+
+    val dataStateGetUser: LiveData<Resource<User>> = _dataStateGetUser
+
+    fun onGetUserNameEvent(event: GetUserByUserNameEvent, userName: String) {
+        viewModelScope.launch {
+            when(event) {
+                is GetUserByUserNameEvent.GetUserByUsername -> {
+                    getUserByUserNameUseCase(userName)
+                        .onEach { dataStateGetUser ->
+                            _dataStateGetUser.value = dataStateGetUser
+                        }
+                        .launchIn(viewModelScope)
+                }
+            }
+        }
+
+    }
+
 }
 
-sealed class AddUserEvent{
-    object SaveUser: AddUserEvent()
+sealed class RegisterUserEvent{
+    object SaveUser: RegisterUserEvent()
+}
+
+sealed class GetUserByUserNameEvent{
+    object GetUserByUsername: GetUserByUserNameEvent()
 }

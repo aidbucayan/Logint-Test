@@ -5,4 +5,5 @@ object Constants {
     const val BASE_URL = "https://jsonplaceholder.typicode.com/"
     const val ERROR_FROM_SERVER = "Oops! Couldn\\'t reach server. Check your internet connection."
     const val EXCEPTION_ERROR = "Oops! Something went wrong. Please try again."
+    const val SELECTED_USER = "selected_user"
 }

@@ -21,5 +21,8 @@ class Utils @Inject constructor(private val context: Context) {
        return matcher.matches()
    }
 
+    fun isUserNameValid(username: String): Boolean {
+        return username.length > 2
+    }
 
 }

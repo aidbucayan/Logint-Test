@@ -8,16 +8,13 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface UserDao {
 
-    @Query("SELECT * FROM users")
-    fun getUsers(): LiveData<List<EntityCacheUser>>
-
-    @Query("SELECT * FROM users WHERE email = :email")
-    fun getNoteById(email: String): EntityCacheUser?
+    @Query("SELECT * FROM users WHERE username = :username")
+    fun getUserByUserName(username: String): EntityCacheUser
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertUser(user: EntityCacheUser)
 
-    @Delete
-    fun deleteUser(user: EntityCacheUser)
+    @Query("SELECT * FROM users WHERE username = :username AND password = :password")
+    fun getUserByUsernamePassword(username: String, password:String): EntityCacheUser
 
 }

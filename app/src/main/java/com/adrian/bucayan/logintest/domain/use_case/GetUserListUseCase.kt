@@ -16,7 +16,7 @@ class GetUserListUseCase @Inject constructor(private val repository: LoginTestRe
     operator fun invoke(): Flow<Resource<List<User>>> = flow {
         try {
             emit(Resource.Loading<List<User>>())
-            val getUserList = repository.getUserList().map{ it.toUser() }
+            val getUserList = repository.getUserListFromApi().map{ it.toUser() }
             emit(Resource.Success<List<User>>(getUserList))
         } catch(e: HttpException) {
             emit(Resource.Error<List<User>>(e.message?: Constants.ERROR_FROM_SERVER))

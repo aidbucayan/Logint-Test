@@ -1,5 +1,9 @@
 package com.adrian.bucayan.logintest.domain.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class User(
     var password: String? = null,
     var email: String? = null,
@@ -10,4 +14,4 @@ data class User(
     var id: Int? = null,
     var address: Address? = null,
     var company: Company? = null,
-)
+): Parcelable

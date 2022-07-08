@@ -1,30 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.LoginTest" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
     </style>
 
     <style name="Theme.LoginTest" parent="Base.Theme.LoginTest" />
 
-<!--    &lt;!&ndash; Top App Bar &ndash;&gt;
-    <style name="Widget.App.AppBar.Top" parent="Widget.MaterialComponents.AppBarLayout.Primary">
-        <item name="android:background">@color/colorBaseLight</item>
-        <item name="android:elevation">0dp</item>
-    </style>
-
-    &lt;!&ndash; Material Toolbar &ndash;&gt;
-    <style name="Widget.App.Toolbar" parent="Widget.MaterialComponents.Toolbar.PrimarySurface">
-        <item name="colorControlNormal">@color/colorTextPrimary</item>
-        <item name="actionMenuTextColor">@color/colorTextPrimary</item>
-        <item name="titleTextColor">@color/colorTextPrimary</item>
-        <item name="android:background">@color/colorBaseLight</item>
-        <item name="navigationIconTint">@color/colorTextPrimary</item>
-        <item name="maxLines">2</item>
-        <item name="contentInsetStart">0dp</item>
-        <item name="contentInsetLeft">0dp</item>
-        <item name="contentInsetStartWithNavigation">0dp</item>
-    </style>-->
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
