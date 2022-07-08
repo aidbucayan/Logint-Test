@@ -26,9 +26,6 @@ class RegisterFragment : Fragment() {
 
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
-    @Inject
-    lateinit var utils: Utils
-
     private val viewModel: RegisterViewModel by viewModels()
 
     override fun onCreateView(
@@ -126,15 +123,15 @@ class RegisterFragment : Fragment() {
     }
 
     private fun isValidUsername(): Boolean {
-        return utils.isUserNameValid(binding.etRegisterUsername.text.toString())
+        return Utils.isUserNameValid(binding.etRegisterUsername.text.toString())
     }
 
     private fun isValidEmail(): Boolean {
-        return utils.isEmailValid(binding.etRegisterEmail.text)
+        return Utils.isEmailValid(binding.etRegisterEmail.text.toString())
     }
 
     private fun isValidPassword(): Boolean {
-        return utils.isPasswordValid(binding.etRegisterPassword.text)
+        return Utils.isPasswordValid(binding.etRegisterPassword.text.toString())
     }
 
     override fun onPrepareOptionsMenu(menu: Menu) {

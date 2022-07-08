@@ -1,22 +1,16 @@
 package com.adrian.bucayan.logintest.presentation.ui.details
 
 import android.Manifest
-import android.content.Context
-import android.content.pm.PackageManager
-import android.os.Build
 import android.os.Bundle
 import android.view.*
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.adrian.bucayan.logintest.R
 import com.adrian.bucayan.logintest.common.Constants
 import com.adrian.bucayan.logintest.data.datasource.preference.AppPrefs
-import com.adrian.bucayan.logintest.databinding.FragmentHomeBinding
 import com.adrian.bucayan.logintest.databinding.FragmentUserDetailBinding
 import com.adrian.bucayan.logintest.domain.model.User
 import com.adrian.bucayan.logintest.presentation.ui.MainActivity

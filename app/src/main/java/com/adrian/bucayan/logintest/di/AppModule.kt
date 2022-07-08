@@ -63,12 +63,6 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideUtils(@ApplicationContext context: Context): Utils {
-        return Utils(context)
-    }
-
-    @Singleton
-    @Provides
     fun provideAppPrefs(@ApplicationContext context: Context): AppPrefs {
         return AppPrefs(context)
     }

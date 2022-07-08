@@ -15,8 +15,6 @@ import com.adrian.bucayan.logintest.data.datasource.preference.AppPrefs
 import com.adrian.bucayan.logintest.databinding.FragmentLoginBinding
 import com.adrian.bucayan.logintest.domain.model.User
 import com.adrian.bucayan.logintest.presentation.ui.MainActivity
-import com.adrian.bucayan.logintest.presentation.ui.register.RegisterUserEvent
-import com.adrian.bucayan.logintest.presentation.ui.register.RegisterViewModel
 import com.adrian.bucayan.logintest.presentation.util.Utils
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -29,8 +27,6 @@ class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
-    @Inject
-    lateinit var utils: Utils
     private val viewModel: LoginViewModel by viewModels()
     @Inject
     lateinit var appPrefs: AppPrefs
@@ -97,11 +93,11 @@ class LoginFragment : Fragment() {
     }
 
     private fun isValidUsername(): Boolean {
-        return utils.isUserNameValid(binding.etLoginUsername.text.toString())
+        return Utils.isUserNameValid(binding.etLoginUsername.text.toString())
     }
 
     private fun isValidPassword(): Boolean {
-        return utils.isPasswordValid(binding.etLoginPassword.text)
+        return Utils.isPasswordValid(binding.etLoginPassword.text.toString())
     }
 
     private fun Context.toast(message: CharSequence, isLengthLong: Boolean = true) =

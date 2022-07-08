@@ -25,10 +25,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import timber.log.Timber
 import java.text.DecimalFormat
-import kotlin.math.asin
-import kotlin.math.cos
-import kotlin.math.sin
-import kotlin.math.sqrt
 
 @AndroidEntryPoint
 @ExperimentalCoroutinesApi

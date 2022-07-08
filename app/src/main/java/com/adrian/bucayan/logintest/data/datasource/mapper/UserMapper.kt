@@ -1,8 +1,6 @@
 package com.adrian.bucayan.logintest.data.datasource.mapper
 
 import com.adrian.bucayan.logintest.data.datasource.model.EntityCacheUser
-import com.adrian.bucayan.logintest.domain.model.Address
-import com.adrian.bucayan.logintest.domain.model.Company
 import com.adrian.bucayan.logintest.domain.model.User
 import com.adrian.bucayan.logintest.domain.request.UserRequest
 
