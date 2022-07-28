@@ -1,5 +1,6 @@
 # Logint-Test
 
+
 Android project written in Kotlin which demonstrates MVVM/MVI design architecture.
 
 - Retrieve data from an api with Retrofit
@@ -18,3 +19,7 @@ The project used MVI and Repository design pattern approach. State in app is def
 - [Material](https://material.io/) Design - Google's material design ui.  
 - [Coroutine](https://developer.android.com/kotlin/coroutines?gclid=CjwKCAjwq5-WBhB7EiwAl-HEkqzFPUj-fstYu_CElohZ5kFNqOibnSiuBhHc-bRiO9yxtm4YNqMm5hoCRY4QAvD_BwE&gclsrc=aw.ds) A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously.                                                                                      
 - [Coroutine Flow](https://developer.android.com/kotlin/flow) - In coroutines, a flow is a type that can emit multiple values sequentially.
+- [Unit Test](https://developer.android.com/training/testing/local-tests) - Basic unit test for testing the Ulits function in the app.
+- [Room Database](https://developer.android.com/training/data-storage/room) - The Room persistence library provides an abstraction layer over SQLite to allow for more robust database access while harnessing the full power of SQLite.
+- [Google Truth](https://github.com/google/truth) - Truth makes your test assertions and failure messages more readable.
+- [MapBox](https://www.mapbox.com/) - The Mapbox Maps SDK for Android is an open-source toolset for building mapping applications for Android devices. The SDK gives you flexibility for visual styling and customizability.
