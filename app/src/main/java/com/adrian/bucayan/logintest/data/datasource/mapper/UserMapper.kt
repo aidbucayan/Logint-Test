@@ -1,8 +1,8 @@
 package com.adrian.bucayan.logintest.data.datasource.mapper
 
 import com.adrian.bucayan.logintest.data.datasource.model.EntityCacheUser
-import com.adrian.bucayan.logintest.domain.model.User
-import com.adrian.bucayan.logintest.domain.request.UserRequest
+import com.adrian.bucayan.logintest.domain.models.User
+import com.adrian.bucayan.logintest.data.remote.request.UserRequest
 
 class UserMapper {
 

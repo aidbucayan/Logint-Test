@@ -1,4 +1,4 @@
-package com.adrian.bucayan.logintest.domain.model
+package com.adrian.bucayan.logintest.domain.models
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

@@ -1,6 +1,6 @@
 package com.adrian.bucayan.logintest.data.remote.dto
 
-import com.adrian.bucayan.logintest.domain.model.User
+import com.adrian.bucayan.logintest.domain.models.User
 import com.fasterxml.jackson.annotation.JsonProperty
 
 data class UserDto(

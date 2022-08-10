@@ -1,6 +1,6 @@
 package com.adrian.bucayan.logintest.data.remote.dto
 
-import com.adrian.bucayan.logintest.domain.model.Geo
+import com.adrian.bucayan.logintest.domain.models.Geo
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 

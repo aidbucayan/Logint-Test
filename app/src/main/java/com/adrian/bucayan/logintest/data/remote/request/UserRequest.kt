@@ -1,4 +1,4 @@
-package com.adrian.bucayan.logintest.domain.request
+package com.adrian.bucayan.logintest.data.remote.request
 
 /**
  * @author Adrian Bucayan

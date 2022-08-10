@@ -2,7 +2,7 @@ package com.adrian.bucayan.logintest.domain.repository
 
 import com.adrian.bucayan.logintest.data.datasource.model.EntityCacheUser
 import com.adrian.bucayan.logintest.data.remote.dto.UserDto
-import com.adrian.bucayan.logintest.domain.request.UserRequest
+import com.adrian.bucayan.logintest.data.remote.request.UserRequest
 
 
 interface LoginTestRepository {

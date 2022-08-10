@@ -6,7 +6,7 @@ import com.adrian.bucayan.logintest.data.datasource.model.EntityCacheUser
 import com.adrian.bucayan.logintest.data.remote.LoginTestApi
 import com.adrian.bucayan.logintest.data.remote.dto.UserDto
 import com.adrian.bucayan.logintest.domain.repository.LoginTestRepository
-import com.adrian.bucayan.logintest.domain.request.UserRequest
+import com.adrian.bucayan.logintest.data.remote.request.UserRequest
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

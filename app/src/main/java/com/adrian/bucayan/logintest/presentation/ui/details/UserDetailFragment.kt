@@ -12,7 +12,7 @@ import com.adrian.bucayan.logintest.R
 import com.adrian.bucayan.logintest.common.Constants
 import com.adrian.bucayan.logintest.data.datasource.preference.AppPrefs
 import com.adrian.bucayan.logintest.databinding.FragmentUserDetailBinding
-import com.adrian.bucayan.logintest.domain.model.User
+import com.adrian.bucayan.logintest.domain.models.User
 import com.adrian.bucayan.logintest.presentation.ui.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi

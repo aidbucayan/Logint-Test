@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.adrian.bucayan.logintest.common.Resource
-import com.adrian.bucayan.logintest.domain.model.User
-import com.adrian.bucayan.logintest.domain.request.UserRequest
+import com.adrian.bucayan.logintest.domain.models.User
+import com.adrian.bucayan.logintest.data.remote.request.UserRequest
 import com.adrian.bucayan.logintest.domain.use_case.GetUserByUsernameUseCase
 import com.adrian.bucayan.logintest.domain.use_case.RegisterUserUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel

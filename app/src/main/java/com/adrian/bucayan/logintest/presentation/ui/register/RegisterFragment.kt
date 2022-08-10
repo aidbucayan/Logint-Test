@@ -10,14 +10,13 @@ import androidx.navigation.fragment.findNavController
 import com.adrian.bucayan.logintest.R
 import com.adrian.bucayan.logintest.common.Resource
 import com.adrian.bucayan.logintest.databinding.FragmentRegisterBinding
-import com.adrian.bucayan.logintest.domain.model.User
-import com.adrian.bucayan.logintest.domain.request.UserRequest
+import com.adrian.bucayan.logintest.domain.models.User
+import com.adrian.bucayan.logintest.data.remote.request.UserRequest
 import com.adrian.bucayan.logintest.presentation.ui.MainActivity
 import com.adrian.bucayan.logintest.presentation.util.Utils
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import timber.log.Timber
-import javax.inject.Inject
 
 
 @ExperimentalCoroutinesApi

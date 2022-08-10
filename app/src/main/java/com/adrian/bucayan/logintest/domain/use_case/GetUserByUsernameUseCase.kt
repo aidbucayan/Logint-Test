@@ -2,7 +2,7 @@ package com.adrian.bucayan.logintest.domain.use_case
 
 import com.adrian.bucayan.logintest.common.Resource
 import com.adrian.bucayan.logintest.data.datasource.mapper.UserMapper
-import com.adrian.bucayan.logintest.domain.model.User
+import com.adrian.bucayan.logintest.domain.models.User
 import com.adrian.bucayan.logintest.domain.repository.LoginTestRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

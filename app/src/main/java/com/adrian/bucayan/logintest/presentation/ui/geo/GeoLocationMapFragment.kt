@@ -11,7 +11,7 @@ import com.adrian.bucayan.logintest.BuildConfig
 import com.adrian.bucayan.logintest.R
 import com.adrian.bucayan.logintest.common.Constants
 import com.adrian.bucayan.logintest.databinding.FragmentGeoLocationMapBinding
-import com.adrian.bucayan.logintest.domain.model.User
+import com.adrian.bucayan.logintest.domain.models.User
 import com.adrian.bucayan.logintest.presentation.ui.MainActivity
 import com.birjuvachhani.locus.Locus
 import com.mapbox.mapboxsdk.Mapbox

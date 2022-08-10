@@ -9,14 +9,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.adrian.bucayan.logintest.R
 import com.adrian.bucayan.logintest.common.Constants
 import com.adrian.bucayan.logintest.common.Resource
 import com.adrian.bucayan.logintest.databinding.FragmentHomeBinding
-import com.adrian.bucayan.logintest.domain.model.User
+import com.adrian.bucayan.logintest.domain.models.User
 import com.adrian.bucayan.logintest.presentation.ui.MainActivity
-import com.adrian.bucayan.logintest.presentation.ui.login.GetUserByUsernamePasswordEvent
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import timber.log.Timber
@@ -28,7 +28,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private val viewModel: HomeViewModel by viewModels()
-    private var userListAdapter : UserListAdapter? = null
+    private lateinit var homeAdapter : HomeAdapter
     private var userList : List<User>? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -40,13 +40,17 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as MainActivity?)?.displayToolbar(false)
-        initRecyclerview()
+        setupRecyclerView()
         subscribeObservers()
 
         viewModel.onGetUserListEvent(GetUserListEvent.GetUserList)
+
+        homeAdapter.setOnItemClickListener {
+            Timber.e("User = " + it.name)
+        }
     }
 
-    private fun initRecyclerview() {
+    /*private fun initRecyclerview() {
         binding.devListRecyclerview.apply {
             layoutManager = LinearLayoutManager(this.context, LinearLayoutManager.VERTICAL, false)
 
@@ -57,6 +61,19 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             userListAdapter = UserListAdapter()
             userListAdapter!!.toSelectUser = this@HomeFragment::toSelectedUser
             adapter = userListAdapter
+        }
+    }*/
+
+    private fun setupRecyclerView() {
+        homeAdapter = HomeAdapter()
+        binding.devListRecyclerview.apply {
+            adapter = homeAdapter
+            layoutManager = LinearLayoutManager(activity)
+            addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
+        }
+
+        homeAdapter.setOnItemClickListener {
+            toSelectedUser(it)
         }
     }
 
@@ -72,7 +89,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
                     userList = dataStateUserList.data
                     if (!userList.isNullOrEmpty()) {
-                        userListAdapter!!.submitList(userList!!)
+                        homeAdapter.differ.submitList(userList)
                     } else {
                         binding.devListTvEmptyMsg.visibility = View.VISIBLE
                     }
@@ -111,8 +128,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
     }
 
-    private fun toSelectedUser(user: User, position: Int?) {
-        Timber.e("user = %s position = %s", user.name, position)
+    private fun toSelectedUser(user: User) {
         val bundle = Bundle()
         bundle.putParcelable(Constants.SELECTED_USER, user)
         findNavController().navigate(R.id.action_homeFragment_to_userDetailFragment, bundle)

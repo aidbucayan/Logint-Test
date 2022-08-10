@@ -2,7 +2,7 @@ package com.adrian.bucayan.logintest.domain.use_case
 
 import com.adrian.bucayan.logintest.common.Resource
 import com.adrian.bucayan.logintest.domain.repository.LoginTestRepository
-import com.adrian.bucayan.logintest.domain.request.UserRequest
+import com.adrian.bucayan.logintest.data.remote.request.UserRequest
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
